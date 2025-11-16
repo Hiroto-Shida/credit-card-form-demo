@@ -27,7 +27,7 @@
 <main class="min-h-screen bg-white py-12 px-4">
   <div class="max-w-md mx-auto">
     <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">
-      クレカdemo入力フォーム
+      クレカ入力フォームdemo
     </h1>
 
     <div class="space-y-8">
