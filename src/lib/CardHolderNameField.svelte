@@ -54,9 +54,7 @@
         type="text"
         inputmode="text"
         autocomplete="cc-name"
-        autocapitalize="characters"
         spellcheck="false"
-        pattern="[A-Za-z\s]*"
         value={field.state.value}
         onblur={field.handleBlur}
         oninput={e =>

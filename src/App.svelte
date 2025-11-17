@@ -4,6 +4,7 @@
   import CreditCardNumberField from './lib/CreditCardNumberField.svelte'
   import ExpiryDateField from './lib/ExpiryDateField.svelte'
   import SecurityCodeField from './lib/SecurityCodeField.svelte'
+  import githubIcon from '/github-mark.svg'
 
   // クレジットカードフォーム
   const creditCardForm = createForm(() => ({
@@ -75,6 +76,17 @@
           </form>
         </div>
       </section>
+    </div>
+
+    <!-- ソースコードリンク -->
+    <div class="text-center mt-8">
+      <a
+        href="https://github.com/Hiroto-Shida/credit-card-form-demo"
+        class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:underline transition-all duration-200"
+      >
+        <img src={githubIcon} alt="GitHub" class="w-5 h-5" />
+        <span class="text-sm font-medium">ソースコード</span>
+      </a>
     </div>
   </div>
 </main>
