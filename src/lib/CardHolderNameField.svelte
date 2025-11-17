@@ -11,10 +11,6 @@
     if (!value) {
       return 'カード名義人は必須です'
     }
-    if (!/^[a-zA-Z\s]+$/.test(value)) {
-      return 'アルファベットのみで入力してください'
-    }
-    // 入力中は姓名チェックをしない
     return undefined
   }
 
@@ -22,12 +18,6 @@
   const validateHolderNameOnBlur = ({ value }: { value: string }) => {
     if (!value) {
       return 'カード名義人は必須です'
-    }
-    if (!/^[a-zA-Z\s]+$/.test(value)) {
-      return 'アルファベットのみで入力してください'
-    }
-    if (value.trim().split(' ').length < 2) {
-      return '姓名を両方入力してください'
     }
     return undefined
   }
@@ -62,7 +52,6 @@
         required
         class="w-full px-3 py-2 border rounded-md
                focus:outline-none focus:border-blue-500
-               uppercase
                {field.state.meta.errors.length > 0
           ? 'border-red-500'
           : 'border-gray-300'}"
