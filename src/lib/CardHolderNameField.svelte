@@ -45,6 +45,7 @@
         inputmode="text"
         autocomplete="cc-name"
         spellcheck="false"
+        enterkeyhint="next"
         value={field.state.value}
         onblur={field.handleBlur}
         oninput={e =>

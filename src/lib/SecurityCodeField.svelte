@@ -58,6 +58,7 @@
         inputmode="numeric"
         autocomplete="cc-csc"
         pattern="[0-9]*"
+        enterkeyhint="done"
         value={field.state.value}
         onblur={field.handleBlur}
         oninput={e =>

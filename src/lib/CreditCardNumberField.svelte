@@ -451,6 +451,7 @@
         inputmode="numeric"
         autocomplete="cc-number"
         pattern="[0-9\s]*"
+        enterkeyhint="next"
         value={field.state.value}
         onblur={e => handleInputBlur(field, e)}
         oninput={e => handleInputChange(field, e)}

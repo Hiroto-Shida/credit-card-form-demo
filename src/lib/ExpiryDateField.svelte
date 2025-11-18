@@ -185,6 +185,7 @@
         autocomplete="cc-exp"
         maxlength="5"
         pattern="[0-9/]*"
+        enterkeyhint="next"
         value={field.state.value}
         onblur={e => handleInputBlur(field, e)}
         oninput={e => handleInputChange(field, e)}
