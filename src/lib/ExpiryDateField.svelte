@@ -183,6 +183,7 @@
         type="text"
         inputmode="numeric"
         autocomplete="cc-exp"
+        maxlength="5"
         pattern="[0-9/]*"
         value={field.state.value}
         onblur={e => handleInputBlur(field, e)}
