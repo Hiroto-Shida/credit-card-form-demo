@@ -404,8 +404,19 @@
     const numbersOnly = value.replace(/\D/g, '')
     const detectedBrand = detectCardBrand(numbersOnly)
 
+    // blur時にもフォーマットを実行
+    const previousValue = fieldApi.state.value || ''
+    const formatResult = formatCardNumber(previousValue, value)
+    const formattedValue = formatResult.formatted
+
+    // フォーマット済みの値で更新
+    if (formattedValue !== value) {
+      fieldApi.state.value = formattedValue
+      target.value = formattedValue
+    }
+
     // blurコンテキストでバリデーション実行
-    const error = validateCardNumber(value, 'blur', detectedBrand)
+    const error = validateCardNumber(formattedValue, 'blur', detectedBrand)
 
     // エラー状態を直接設定
     fieldApi.setMeta((prev: any) => ({
